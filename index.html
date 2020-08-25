@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>王文杰的博客- 人工智能、机器学习、深度学习、python、C\C++、go、java、JavaScript、HTML、pytorch、数据结构、算法、软件管家、技术分析、重装系统</title>
+    <meta name="description" content="王文杰的博客- 人工智能、机器学习、深度学习、python、C\C++、go、java、JavaScript、HTML、pytorch、数据结构、算法、软件管家、技术分析、重装系统">
+    <meta name="keywords" content="王文杰的博客- 人工智能、机器学习、深度学习、python、C\C++、go、java、JavaScript、HTML、pytorch、数据结构、算法、软件管家、技术分析、重装系统">
+    <link rel="shortcut icon" href="img/wwj.png">
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="fonts/iconfont1.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="live2d/css/live2d.css" />
+</head>
+<body>
+<div id="landlord" color: white >
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var message_Path = 'https://6dduu6.github.io/live2d/'
+    var home_Path = 'https://6dduu6.github.io/'
+</script>
+<script type="text/javascript" src="live2d/js/live2d.js"></script>
+<script type="text/javascript" src="live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://6dduu6.github.io/live2d/Pio/model.json");
+</script>
+    <section class="shortcut">
+        <div class="w">
+            <div class="fl">
+                <ul>
+                    <li><a href="#" id="home-page" onclick="location.reload()"> 首页 </a></li>
+                    <li><a href="/bulletScreen?qq={{.qq}}&name={{.username}}" id="leave-word" target="_blank"> 留言 </a></li>
+                    <li><a href="#" id="photo-album"> 相册 </a></li>
+                    <li><a href="#" id="abut-me"> 关于我 </a></li>
+                </ul>
+            </div>
+            <div class="fr">
+                <ul>
+                    <li>
+                        <a href="http://www.wwj3.com"> <img class="hrefqq" src= "../img/denglu.jpg" > <p class="login"> 登录/注册 </p> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="middle">
+        <div class="w">
+            <div class="main">
+                <div class="sidebar-left">
+                    <div class="personage">
+                        <div id="bg">
+                            <img class="touXiang" src="img/touxiang.jpg">
+                        </div>
+                        <img class="head-portrait" src="http://q1.qlogo.cn/g?b=qq&nk=1007131354&s=100"><br/>
+                        <div>Aurora</div><br/><br/>
+                        <ul>
+                            <li><a href="#" id="email" target="_blank"></a></li>
+                            <li><a href="#" id="github" target="_blank"></a></li>
+                            <li><a href="https://space.bilibili.com/267039738" id="bilibili" target="_blank"></a></li>
+                            <li><a href="#" id="weibo" target="_blank"></a></li>
+                            <li><a href="#" id="zhihu" target="_blank"></a></li>
+                            <li><a href="#" id="qq" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                    <!--音乐播放器-->
+                    <div class="music">
+                        <audio class="music-player-audio" id="music-player-audio" src="./music/暗恋是一个人的事.mp3"></audio>
+                        <div class="music-player">
+                            <div class="background-blur"></div>
+                            <!--唱片机器模型-->
+                            <div class="turntables">
+                                <div class="rotate-img"></div>
+                                <div class="cd-tou"></div>
+                            </div>
+                            <!--正在播放显示-->
+                            <div class="playing-music">
+                                <!--歌曲名字-->
+                                <div class="music-info">
+                                    <p class="music-info-name" >暗恋是一个人的事</p>
+                                </div>
+                                <div class="player-control">
+                                    <div class="player-control-btns">
+                                        <div class="player-control-prev"><i class="iconfont-prev iconfont icon-prev"></i></div>
+                                        <div class="player-control-play"><i class="iconfont-play iconfont icon-play"></i></div>
+                                        <div class="player-control-next"><i class="iconfont-next iconfont icon-next"></i></div>
+                                        <div class="player-control-mode"><i class="iconfont-mode iconfont icon-loop"></i></div>
+                                    </div>
+                                    <!-- 歌曲播放进度 -->
+                                    <div class="player-control-content">
+                                        <div class="progress">
+                                            <div class="myBar">
+
+                                            </div>
+                                        </div>
+                                        <div class="nowTime">00:00</div>
+                                        <div class="totalTime">00:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--音乐列表-->
+                        <div class="music-list">
+                            <ol class="music-list-content">
+                                <li class="liId"><div class="id">1</div><div class="musicName1 musicName">暗恋是一个人的事</div><div class="songName">宿羽阳</div></li>
+                                <li class="liId"><div class="id">2</div><div class="musicName2 musicName">白羊</div><div class="songName">徐秉龙 / 沈以诚</div></li>
+                                <li class="liId"><div class="id">3</div><div class="musicName3 musicName">保留</div><div class="songName">郭顶</div></li>
+                                <li class="liId"><div class="id">4</div><div class="musicName4 musicName">将故事写成我们</div><div class="songName">悠油有柚</div></li>
+                                <li class="liId"><div class="id">5</div><div class="musicName5 musicName">今天也想见到你</div><div class="songName">焦迈奇</div></li>
+                                <li class="liId"><div class="id">6</div><div class="musicName6 musicName">狂恋你</div><div class="songName">沈以诚</div></li>
+                                <li class="liId"><div class="id">7</div><div class="musicName7 musicName">你也没有错</div><div class="songName">王贰浪</div></li>
+                                <li class="liId"><div class="id">8</div><div class="musicName8 musicName">水星记</div><div class="songName">郭顶</div></li>
+                                <li class="liId"><div class="id">9</div><div class="musicName9 musicName">说好不哭</div><div class="songName">周杰伦</div></li>
+                                <li class="liId"><div class="id">10</div><div class="musicName10 musicName">听说</div><div class="songName">丛铭君</div></li>
+                                <li class="liId"><div class="id">11</div><div class="musicName11 musicName">像鱼</div><div class="songName">王贰浪</div></li>
+                                <li class="liId"><div class="id">12</div><div class="musicName12 musicName">遇见</div><div class="songName">孙燕姿</div></li>
+
+                                <li class="liId"><div class="id">13</div><div class="musicName13 musicName">我曾</div><div class="songName">隔壁老樊</div></li>
+                                <li class="liId"><div class="id">14</div><div class="musicName14 musicName">这一生关于你的风景</div><div class="songName">隔壁老樊</div></li>
+                                <li class="liId"><div class="id">15</div><div class="musicName15 musicName">绿洲</div><div class="songName">沈以诚</div></li>
+                                <li class="liId"><div class="id">16</div><div class="musicName16 musicName">剃须刀</div><div class="songName">沈以诚</div></li>
+                                <li class="liId"><div class="id">17</div><div class="musicName17 musicName">多想在平庸的生活拥抱你</div><div class="songName">隔壁老樊</div></li>
+                                <li class="liId"><div class="id">18</div><div class="musicName18 musicName">椿</div><div class="songName">沈以诚</div></li>
+
+                                <li class="liId"><div class="id">19</div><div class="musicName19 musicName">As Long as You Love</div><div class="songName">后街男孩</div></li>
+                                <li class="liId"><div class="id">20</div><div class="musicName20 musicName">光年之外</div><div class="songName">邓紫棋</div></li>
+                                <li class="liId"><div class="id">21</div><div class="musicName21 musicName">一切皆好</div><div class="songName">RADWIMPS</div></li>
+                                <li class="liId"><div class="id">22</div><div class="musicName22 musicName">爱所能做的事情还有什么</div><div class="songName">RADWIMPS</div></li>
+                                <li class="liId"><div class="id">23</div><div class="musicName23 musicName">童话镇</div><div class="songName">暗杠</div></li>
+                                <li class="liId"><div class="id">24</div><div class="musicName24 musicName">追</div><div class="songName">陈壹千</div></li>
+                                <li class="liId"><div class="id">25</div><div class="musicName25 musicName">世界上不存在的歌</div><div class="songName">陈奕迅</div></li>
+                                <li class="liId"><div class="id">26</div><div class="musicName26 musicName">斑马斑马</div><div class="songName">房东的猫</div></li>
+                                <li class="liId"><div class="id">27</div><div class="musicName27 musicName">云烟成雨</div><div class="songName">房东的猫</div></li>
+                                <li class="liId"><div class="id">28</div><div class="musicName28 musicName">归去来兮</div><div class="songName">花粥</div></li>
+                                <li class="liId"><div class="id">29</div><div class="musicName29 musicName">烟火里的尘埃</div><div class="songName">华晨宇</div></li>
+                                <li class="liId"><div class="id">30</div><div class="musicName30 musicName">国王与乞丐</div><div class="songName">华晨宇/杨宗纬</div></li>
+                                <li class="liId"><div class="id">31</div><div class="musicName31 musicName">失眠飞行</div><div class="songName">沈以诚</div></li>
+                                <li class="liId"><div class="id">32</div><div class="musicName32 musicName">Summer</div><div class="songName">久石譲</div></li>
+                                <li class="liId"><div class="id">33</div><div class="musicName33 musicName">起风了</div><div class="songName">买辣椒也用券</div></li>
+                                <li class="liId"><div class="id">34</div><div class="musicName34 musicName">像我这样的人</div><div class="songName">毛不易</div></li>
+                                <li class="liId"><div class="id">35</div><div class="musicName35 musicName">消愁</div><div class="songName">毛不易</div></li>
+                                <li class="liId"><div class="id">36</div><div class="musicName36 musicName">未闻花名</div><div class="songName">茅野愛衣</div></li>
+                                <li class="liId"><div class="id">37</div><div class="musicName37 musicName">Lemon</div><div class="songName">米津玄師</div></li>
+                                <li class="liId"><div class="id">38</div><div class="musicName38 musicName">后继者</div><div class="songName">任然</div></li>
+                                <li class="liId"><div class="id">39</div><div class="musicName39 musicName">无人之岛</div><div class="songName">任然</div></li>
+                                <li class="liId"><div class="id">40</div><div class="musicName40 musicName">你就不要想起我</div><div class="songName">田馥甄</div></li>
+                                <li class="liId"><div class="id">41</div><div class="musicName41 musicName">嗜好</div><div class="songName">颜人中</div></li>
+                                <li class="liId"><div class="id">42</div><div class="musicName42 musicName">晚安</div><div class="songName">颜人中</div></li>
+                                <li class="liId"><div class="id">43</div><div class="musicName43 musicName">有些</div><div class="songName">颜人中</div></li>
+                                <li class="liId"><div class="id">44</div><div class="musicName44 musicName">遇到</div><div class="songName">颜人中</div></li>
+                                <li class="liId"><div class="id">45</div><div class="musicName45 musicName">其实都没有</div><div class="songName">杨宗纬</div></li>
+                                <li class="liId"><div class="id">46</div><div class="musicName46 musicName">下山</div><div class="songName">要不要买菜</div></li>
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-part">
+                    <div class="navigation">
+                        <div class="dynamic navigationDiv" data-flag = '0'>动态</div>
+                        <div class="deepLearn navigationDiv" data-flag = '0'><a class="softwareurl" href="https://zh.d2l.ai/index.html" target="_blank">深度学习</a></div>
+                        <div class="algorithm navigationDiv" data-flag = '0'>算法</div>
+                        <div class="pythonLanguage navigationDiv" data-flag = '0'><a class="softwareurl" href="https://www.runoob.com/python3/python3-tutorial.html" target="_blank">Python</a></div>
+                        <div class="goLanguage navigationDiv" data-flag = '0'><a class="softwareurl" href="http://www.topgoer.com/" target="_blank">Go</a></div>
+                        <div class="cLanguage navigationDiv" data-flag = '0'><a class="softwareurl" href="https://www.runoob.com/cplusplus/cpp-tutorial.html" target="_blank">C/C++</a></div>
+                        <div class="linux navigationDiv" data-flag = '0'><a class="softwareurl" href="https://www.runoob.com/linux/linux-tutorial.html" target="_blank">Linux</a></div>
+                        <div class="mysql navigationDiv" data-flag = '0'><a class="softwareurl" href="https://www.runoob.com/mysql/mysql-tutorial.html" target="_blank">Mysql</a></div>
+                        <div class="software navigationDiv" data-flag = '0'><a class="softwareurl" href="https://mp.weixin.qq.com/s/RH0oCJWD00QFXpuCYwB8oA" target="_blank">软件安装</a></div>
+                        <div class="other navigationDiv" data-flag = '0'>Other</div>
+                    </div>
+                    <div class="show">
+                        <!--
+                        <div class="talk" data-id ="0">
+                            <div class="portrait-parent">
+                                <img class="portrait" src="http://q1.qlogo.cn/g?b=qq&nk=1007131354&s=100"> </img>
+                            </div>
+                            <p class="talkName">Aurora</p>
+                            <p class="talkTimeSite">2020年8月13日·成都</p>
+                            <p class="maintText">
+                                少年听雨歌楼上。红烛昏罗帐。<br>
+                                壮年听雨客舟中。<br>
+                                江阔云低、断雁叫西风。<br>
+                                而今听雨僧庐下。<br>
+                                鬓已星星也。悲欢离合总无情。<br>
+                                一任阶前、点滴到天明。</p>
+                            <p class="talkLine"></p>
+                            <div class="talkfuntion" data-id ="0">
+                                <div class="talkViewsNumber" data-id ="0"><span class="iconfont1">&#xe679;</span><span >观看人数</span><span >&nbsp;99</span></div>
+                                <div class="talkComment" data-id ="0"><span class="iconfont1">&#xe695;</span><span>评论</span><span>&nbsp;34</span></div>
+                                <div class="tlakLike" data-id ="0"><span class="iconfont1">&#xe60c;</span><span>点赞</span><span >&nbsp;60</span></div>
+                            </div>
+                        </div>
+                        <div class="conmentDiv">
+                            <p>评论</p>
+                            <p class="talkLine"></p>
+                            <div class="conmentqq">
+                                <img class="hrefqq" src= "../img/denglu.jpg" >
+                            </div>
+                            <div>
+                                <textarea type="text" maxlength="500" placeholder="发一条友善的评论"cols="80" rows="4" class="inputConment1"></textarea>
+                                <div class="conmentSubmit">发表评论</div>
+                            </div>
+                            <p class="talkLine1"></p>
+
+                            <div class="commentDataDiv">
+                                <div class="commentImgData">
+                                    <img class="commentDataqq" src= "../img/denglu.jpg" >
+                                </div>
+                                <p class="commentName">Aurora</p>
+                                <p class="commentText">123453333333333333333333333333333333333333333333333333333333555555555555555555555556</p>
+                                <p class="commentTime">2020.8.18 </p>
+                                <p class="commentReply">回复</p>
+
+                            </div>
+
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="sidebar-right">
+                    <div class="notification">
+                        <h4>公   告</h4>
+                        <div class="cut-off-rule"></div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前版本还是测试阶段，出现bug请私聊小博主...蟹蟹。</div>
+                    </div>
+                    <div class="proverb">
+                        <div>有生之年</div>
+                        <div>愿你勇敢</div>
+                        <div>愿你平安</div>
+                        <div>愿你没有苦难 活的简单</div>
+                        <div>愿你累了倦了有人为你分担</div>
+                        <div>愿你每个夜晚都会有美梦作伴</div>
+                        <div>愿你长路漫漫得偿所愿</div>
+                        <div>愿这世间烦恼从此与你无关</div>
+                        <div>愿你遇事全部得你心欢</div>
+                        <div>愿你前程似锦</div>
+                        <div>不凡此生</div>
+                    </div>
+                    <div class="member">
+                        <a href="/bulletScreen?qq={{.qq}}&name={{.username}}" class="bulletScreenmember" target="_blank">
+                            <h4 class="bulletScreenh4">最 新 留 言</h4>
+                        </a>
+                            <!--最近访问-->
+                        <a href="/bulletScreen?qq={{.qq}}&name={{.username}}" class="bulletScreenmember1" target="_blank">
+                            <ol class="bulletScreen">
+
+                            </ol>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="w">
+            <div class="mod_copyright">
+                版权所有 © 2020-2021 wwj3.com &nbsp;&nbsp;|&nbsp;&nbsp;蜀ICP备20021865号<br/>
+                地址: 中国四川省成都市高新区西部园区西南交通大学<br/>
+                邮箱:1007131354@qq.com<br/><br/>
+                <span class="overTime">
+                    o(*￣▽￣*)ブ小破站已经运行了0年0月0天
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var sendConmentDivId = 0;
+        //评论
+        var commentOpenFlag = 0;
+        //点赞
+        var isTalkViewsNumber = 0;
+        var isTalkComment = 0;
+        var isTlakLike = 0;
+        var songNum = 46;
+        var flag = 1;
+        var no_of = 0;
+        var mode = 0;
+        var hrefqq = "http://q1.qlogo.cn/g?b=qq&nk="+{{.qq}} + "&s=40";
+        $("#login").css("background","url("+hrefqq+") no-repeat");
+        $(".hrefqq").attr("src",hrefqq);
+        $(".liId").click(function(){
+            console.log($(this).val());
+            console.log($(this).children("div.musicName").text());
+            var songName = $(this).children("div.musicName").text();
+            console.log($('.music-info-name').text($(this).children("div.musicName").text()));
+            $(".music-player-audio").attr("src",'./music/'+songName+'.mp3');
+            var player =  $(".music-player-audio")[0]; /*jquery对象转换成js对象*/
+            console.log(flag);
+            flag = parseInt($(this).children("div.id").text());
+            console.log(flag);
+            no_of = 1;
+            player.play(); /*播放*/
+            $('.rotate-img').addClass('rotate-img1');
+            $('.iconfont-play').removeClass('icon-play').addClass('icon-pause');
+        });
+        $(".iconfont-play").click(function(){
+            var player =  $(".music-player-audio")[0]; /*jquery对象转换成js对象*/
+            if (no_of == 0){ /*如果已经暂停*/
+                no_of = 1;
+                player.play(); /*播放*/
+                $('.iconfont-play').removeClass('icon-play').addClass('icon-pause');
+                $('.rotate-img').addClass('rotate-img1');
+            }else {
+                no_of = 0;
+                player.pause();/*暂停*/
+                $('.iconfont-play').addClass('icon-play').removeClass('icon-pause');
+                $('.rotate-img').removeClass('rotate-img1');
+            }
+        });
+        $(".iconfont-prev").click(function(){
+            var player =  $(".music-player-audio")[0]; /*jquery对象转换成js对象*/
+            $('.iconfont-play').removeClass('icon-play').addClass('icon-pause');
+            if(flag == 1) {
+                flag = songNum;
+            }else {
+                flag = flag - 1;
+            }
+            var songName = $('.musicName'+ flag).text();
+            console.log(songName);
+            $(".music-player-audio").attr("src",'./music/'+songName+'.mp3');
+            player.play(); /*播放*/
+            $('.music-info-name').text(songName);
+        });
+        $(".iconfont-next").click(function(){
+            var player =  $(".music-player-audio")[0]; /*jquery对象转换成js对象*/
+            $('.iconfont-play').removeClass('icon-play').addClass('icon-pause');
+            if(flag == songNum) {
+                flag = 1;
+            }
+            else {
+                flag = flag + 1;
+            }
+            var songName = $('.musicName'+ flag).text();
+            console.log(songName);
+            $(".music-player-audio").attr("src",'./music/'+songName+'.mp3');
+            player.play(); /*播放*/
+            $('.music-info-name').text(songName);
+        });
+        //模式
+        $(".iconfont-mode").click(function(){
+            mode = (mode +1)%2;
+            if(mode == 0){
+                $('.iconfont-mode').removeClass('icon-single').addClass('icon-loop');
+            }
+            if(mode == 1){
+                $('.iconfont-mode').removeClass('icon-loop').addClass('icon-single');
+            }
+        })
+        //播放结束
+        var audio = document.getElementById("music-player-audio");
+        audio.loop = false;
+        audio.addEventListener('ended', function () {
+            if(mode==0){
+                $(".iconfont-next").click();
+            }
+            if(mode==1){
+                player.play(); /*播放*/
+            }
+
+        }, false);
+        var player =  $(".music-player-audio")[0];
+        player.addEventListener("timeupdate",function(){//监听音频播放的实时时间事件
+            let timeDisplay;
+            //用秒数来显示当前播放进度
+            timeDisplay = Math.floor(player.currentTime);//获取实时时间
+             console.log(timeDisplay)
+            //处理时间
+            //分钟
+            let minute = timeDisplay / 60;
+            let minutes = parseInt(minute);
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            //秒
+            let second = timeDisplay % 60;
+            let seconds = Math.round(second);
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            console.log(minutes);
+            console.log(seconds);
+            $(".nowTime").text(minutes+':'+seconds);
+            let sumtime =  Math.floor(myVid.duration);
+            let sum = parseInt(sumtime);
+            //  $('.myBar').style.width = parseInt(minutes/sum) + "%";
+            console.log('sum',sum);
+            console.log(timeDisplay/sum*100);
+            $('.myBar').width(timeDisplay/sum*100 + '%');
+        },false);
+        var myVid = document.getElementById("music-player-audio");
+        console.log("duration  ",myVid);
+        if(myVid != null){
+            var duration;
+            myVid.load();
+            myVid.oncanplay = function () {
+                console.log("myVid.duration",myVid.duration);
+                let songtime = Math.floor(myVid.duration);
+                let minute = songtime / 60;
+                let minutes = parseInt(minute);
+                if(minutes < 10){
+                    minutes = "0"+ minutes;
+                }
+                let seconds = songtime % 60;
+                if(seconds < 10){
+                    seconds = "0" + seconds;
+                }
+                $(".totalTime").text(minutes+':'+seconds);
+            }
+        };
+        //最新留言
+        $.ajax({
+            url: "/bulletScreenLatest",
+            data: {"message": "yes"},
+            success: function (data,status) {
+                console.log("最新留言");
+                 console.log(data);
+                 for(var i =0; i < data.length; i++){
+                     $(".bulletScreen").append("                           <li>\n" +
+                         "                                    <img class=\"bulletScreenImg\" src=\"http://q1.qlogo.cn/g?b=qq&nk="+data[i].QQ+"&s=40\">\n" +
+                         "                                    <span class=\"bulletScreenTxet\">&nbsp"+data[i].BulletScreenText+"</span>\n" +
+                         "                                </li>")
+                 }
+                // $(".show").html(msg);
+
+            }
+        });
+        //深度学习
+        $(".deepLearn").click(function () {
+            if($(".deepLearn").attr("data-flag")==="0") {
+                $(".show").empty();
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".deepLearn").attr("data-flag", "1");
+                $(".deepLearn").addClass('dynamicClick');
+                $.ajax({
+                    url: "/deepLearn",
+                    data: {"message": "1"},
+                    success: function (msg,status) {
+                       // console.log(msg);
+
+                        $(".show").html(msg);
+                    }
+                });
+            }
+        })
+        //算法
+        $(".algorithm").click(function () {
+            if($(".algorithm").attr("data-flag")==="0") {
+                $(".show").empty();
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".algorithm").attr("data-flag", "1");
+                $(".algorithm").addClass('dynamicClick');
+                $.ajax({
+                    url: "/algorithm",
+                    data: {"message": "1"},
+                    success: function (msg,status) {
+                       // console.log(msg);
+                        $(".show").html(msg);
+
+                    }
+                });
+            }
+        });
+        //python
+        $(".pythonLanguage").click(function () {
+            if($(".pythonLanguage").attr("data-flag")==="0") {
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".pythonLanguage").attr("data-flag", "1");
+                $(".pythonLanguage").addClass('dynamicClick');
+            }
+        });
+        //go语言
+        $(".goLanguage").click(function () {
+            if($(".goLanguage").attr("data-flag")==="0") {
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".goLanguage").attr("data-flag", "1");
+                $(".goLanguage").addClass('dynamicClick');
+            }
+        });
+        //c++
+        $(".cLanguage").click(function () {
+
+            if($(".cLanguage").attr("data-flag")==="0") {
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".cLanguage").attr("data-flag", "1");
+                $(".cLanguage").addClass('dynamicClick');
+            }
+        });
+        //linux
+        $(".linux").click(function () {
+            if($(".linux").attr("data-flag")==="0") {
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".linux").attr("data-flag", "1");
+                $(".linux").addClass('dynamicClick');
+            }
+        });
+        //mysql
+        $(".mysql").click(function () {
+            if($(".mysql").attr("data-flag")==="0") {
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".mysql").attr("data-flag", "1");
+                $(".mysql").addClass('dynamicClick');
+            }
+        });
+        //software
+        $(".software").click(function () {
+            if($(".software").attr("data-flag")==="0") {
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".software").attr("data-flag", "1");
+                $(".software").addClass('dynamicClick');
+            }
+        });
+        //other
+        $(".other").click(function () {
+            alert("小博主，还在加班加点的写，木要崔啦。。。")
+            if($(".other").attr("data-flag")==="0") {
+                $(".show").empty();
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".other").attr("data-flag", "1");
+                $(".other").addClass('dynamicClick');
+                $.ajax({
+                    url: "/goLanguage",
+                    data: {"message": "1"},
+                    success: function (msg,status) {
+                        // console.log(msg);
+                        // $(".show").html(msg);
+                        alert("小博主，还在加班加点的写，木要崔啦。。。")
+                    }
+                });
+            }
+        });
+        //说说
+        $(".dynamic").click(function () {
+            if($(".dynamic").attr("data-flag")==="0") {
+                $(".navigationDiv").attr("data-flag", "0");
+                $(".show").empty();
+                $(".navigationDiv").removeClass('dynamicClick');
+                $(".dynamic").attr("data-flag", "1");
+                $(".dynamic").addClass('dynamicClick');
+                $.ajax({
+                    url: "/talk1",
+                    data: {},
+                    success: function (data, status) {
+                        console.log(status);
+                        console.log(data);
+                        for (let i = 0; i < data.length; i++) {
+                            console.log(data[i]["Name"]);
+                            $('.show').prepend("<div class=\"talk\" data-id =" + (1 + i) + "    >\n" +
+                                "                            <div class=\"portrait-parent\">\n" +
+                                "                                <img class=\"portrait\" src=\"http://q1.qlogo.cn/g?b=qq&nk=1007131354&s=100\"> </img>\n" +
+                                "                            </div>\n" +
+                                "                            <p class=\"talkName\">" + data[i]["Name"] + "</p>\n" +
+                                "                            <p class=\"talkTimeSite\">" + data[i]["TimeSite"] + "</p>\n" +
+                                "                            <p class=\"maintText\">" + data[i]["Text"] + "</p>\n" +
+                                "                            <p class=\"talkLine\"></p>\n" +
+                                "                            <div class=\"talkfuntion\">\n" +
+                                "                                <div class=\"talkViewsNumber\"><span class=\"iconfont1\">&#xe679;</span><span >观看人数&nbsp;</span><span class=\"viewNum viewNumId" + (i + 1) + "\" data-flag=\"0\" >" + data[i]["ViewsNumber"] + "</span></div>\n" +
+                                "                                <div class=\"talkComment\"><span class=\"iconfont1\">&#xe695;</span><span>评论&nbsp;</span><span class=\"commentNum commentNumId" + (1 + i) + "\" data-flag=\"0\">" + data[i]["Comment"] + "</span></div>\n" +
+                                "                                <div class=\"tlakLike\"><span class=\"iconfont1\">&#xe60c;</span><span>点赞&nbsp;</span><span class=\"likeNum likeNumId" + (1 + i) + "\" data-flag=\"0\">" + data[i]["Like"] + "</span></div>\n" +
+                                "                            </div>\n" +
+                                "                        </div>");
+                        }
+                        //点赞
+                        $(".tlakLike").on('click', function () {
+                            console.log("点赞")
+                            console.log($(this).parent().parent().attr("data-id"));
+                            if ($(this).children("span.likeNum").attr("data-flag") === "0") {
+                                var id = $(this).parent().parent().attr("data-id");
+                                $.ajax({
+                                    url: "/tlakLike",
+                                    data: {"tlakId": $(this).parent().parent().attr("data-id")},
+                                    success: function (data, status) {
+
+                                        if (data.message === "yes") {
+                                            //数据库
+                                            $(".likeNumId" + id).attr("data-flag", "1");
+                                            $(".likeNumId" + id).text(data.lnum + "");
+                                            $(".likeNumId" + id).parent().addClass("tlakLikeColor");
+
+                                            $(".viewNumId" + id).attr("data-flag", "1");
+                                            $(".viewNumId" + id).text(data.vnum + "");
+                                            $(".viewNumId" + id).parent().addClass("talkViewsNumberColor");
+
+                                            console.log(data.num);
+                                        }
+                                    }
+                                });
+                                console.log(22222);
+                                //    $(this).children("span.likeNum").text("str");
+                            }
+                        });
+                        //评论
+                        $(".talkComment").on('click', function () {
+                            var id = $(this).parent().parent().attr("data-id");
+                            console.log("评论");
+                            if ($(".viewNumId" + id).attr("data-flag") === "0") {
+
+                                $.ajax({
+                                    url: "/viewNum",
+                                    data: {"tlakId": id},
+                                    success: function (data, status) {
+                                        if (data.message === "yes") {
+                                            //数据库
+                                            $(".viewNumId" + id).attr("data-flag", "1");
+                                            $(".viewNumId" + id).text(data.vnum + "");
+                                            $(".viewNumId" + id).parent().addClass("talkViewsNumberColor");
+                                            console.log(data.num);
+                                        }
+                                    }
+                                });
+                            }
+                            console.log(commentOpenFlag);
+                            $(".talkLine3").remove();
+                            $(".conmentDivId" + id).toggle();
+                            console.log("评论");
+                            console.log($(this).parent().parent().attr("data-id"));
+
+                            if ($(this).children("span.commentNum").attr("data-flag") === "0") {
+                                $(this).children("span.commentNum").attr("data-flag", "1");
+                                $(this).parent().parent().append("<p class=\"talkLine3\"></p>" +
+                                    "<div class=\"conmentDiv conmentDivId" + id + "\">\n" +
+                                    "                            <p>评论</p>\n" +
+                                    "                                  <div class='commentSend'> " +
+                                    "                            <div class=\"conmentqq\">\n" +
+                                    "                                <img class=\"hrefqq\" src= \"" + hrefqq + "\" >\n" +
+                                    "                            </div>\n" +
+                                    "                            <div>\n" +
+                                    "                                <textarea type=\"text\" maxlength=\"500\" placeholder=\"发一条友善的评论\"cols=\"80\" rows=\"4\" class=\"inputConment inputConmentId" + id + "\"></textarea>\n" +
+                                    "                                <div class=\"conmentSubmit conmentSubmit" + id + "\">发表评论</div>\n" +
+                                    "                            </div>\n" +
+                                    "                            </div>  " +
+                                    "                            </p>");
+                                //sql comment
+                                $(".conmentSubmit" + id).click(function () {
+                                    var myDate = new Date;
+                                    var year = myDate.getFullYear(); //获取当前年
+                                    var mon = myDate.getMonth() + 1; //获取当前月
+                                    var date = myDate.getDate(); //获取当前日
+                                    var commentTime = year + "年" + mon + "月" + date + "日";
+                                    console.log($(".inputConmentId" + id).val());
+                                    if($(".inputConmentId" + id).val() == ""){
+                                        alert("输入为空！");
+                                    }
+                                    else {
+                                        $.ajax({
+                                            url: "/sendComment1",
+                                            data: {
+                                                "talkId": id,
+                                                "commentName": {{.username}},
+                                                "qq": {{.qq}},
+                                                "commentText": $(".inputConmentId" + id).val(),
+                                                "commentTime": commentTime,
+                                            },
+                                            success: function (data, status) {
+                                                $(".conmentDivId" + id).append("<p class=\"talkLine2\">" +
+                                                    "                           <div class=\"commentDataDiv commentDataDivId\">\n" +
+                                                    "                                <div class=\"commentImgData\">\n" +
+                                                    "                                    <img class=\"commentDataqq\" src= \"http://q1.qlogo.cn/g?b=qq&nk=" + {{.qq}} +"&s=40\" >\n" +
+                                                    "                                </div>\n" +
+                                                    "                                <p class=\"commentName\">" + {{.username}} +"</p>\n" +
+                                                    "                                <p class=\"commentText\">" + $(".inputConmentId" + id).val() + "</p>\n" +
+                                                    "                                <p class=\"commentTime\">" + commentTime + "</p>\n" +
+                                                    "                                <p class=\"commentReply\"></p>\n" +
+                                                    "                            </div>")
+                                                $.ajax({
+                                                    url: "/commentNum",
+                                                    data: {"tlakId": id},
+                                                    success: function (data, status) {
+                                                        if (data.message === "yes") {
+                                                            //数据库
+                                                            $(".commentNumId" + id).text(data.cnum + "");
+                                                            $(".commentNumId" + id).parent().addClass("talkViewsNumberColor");
+                                                            $(".inputConmentId" + id).val("");
+                                                        }
+                                                    }
+                                                });
+
+                                            }
+                                        });
+                                    }
+                                })
+                                $.ajax({
+                                    url: "/talkComment",
+                                    data: {"talkId": id},
+                                    success: function (data, status) {
+                                        console.log(id);
+                                        if (data == null) {
+
+                                            //数据库
+                                            //    $(".likeNumId" + id).attr("data-flag", "1");
+                                            //    $(".likeNumId" + id).text(data.lnum + "");
+                                            //    $(".likeNumId" + id).parent().addClass("tlakLikeColor");
+
+                                            //    $(".viewNumId" + id).text(data.vnum + "");
+                                            //   $(".viewNumId" + id).parent().addClass("talkViewsNumberColor");
+                                            console.log("null。。。");
+                                        } else {
+                                            console.log(data);
+                                            for (let i = 0; i < data.length; i++) {
+                                                if (data[i].PositionFlag === "0")
+                                                    $(".conmentDivId" + id).append("<p class=\"talkLine2\">" +
+                                                        "                           <div class=\"commentDataDiv commentDataDivId" + data[i].CommentId + "\">\n" +
+                                                        "                                <div class=\"commentImgData\">\n" +
+                                                        "                                    <img class=\"commentDataqq\" src= \"http://q1.qlogo.cn/g?b=qq&nk=" + data[i].QQ + "&s=40\" >\n" +
+                                                        "                                </div>\n" +
+                                                        "                                <p class=\"commentName\">" + data[i].CommentName + "</p>\n" +
+                                                        "                                <p class=\"commentText\">" + data[i].CommentText + "</p>\n" +
+                                                        "                                <p class=\"commentTime\">" + data[i].CommentTime + "</p>\n" +
+                                                        "                                <p class=\"commentReply \" data-id =\"" + data[i].CommentId + "\" data-commentName= \"" + data[i].CommentName + "\">回复</p>\n" +
+                                                        "                            </div>")
+                                            }
+                                            for (let i = 0; i < data.length; i++) {
+                                                if (data[i].PositionFlag === "1")
+                                                    $(".commentDataDivId" + data[i].ReplyId).append(
+                                                        "                           <div class=\"commentDataDiv1 commentDataDivId" + data[i].CommentId + "\">\n" +
+                                                        "                                <div class=\"commentImgData\">\n" +
+                                                        "                                    <img class=\"commentDataqq1\" src= \"http://q1.qlogo.cn/g?b=qq&nk=" + data[i].QQ + "&s=40\" >\n" +
+                                                        "                                </div>\n" +
+                                                        "                                <p class=\"commentName1\">" + data[i].CommentName + "</p>\n" +
+                                                        "                                <p class=\"commentText1\">" + data[i].CommentText + "</p>\n" +
+                                                        "                                <p class=\"commentTime1\">" + data[i].CommentTime + "</p>\n" +
+                                                        "                                <p class=\"commentReply1\" data-id =\"" + data[i].CommentId + "\" data-commentName= \"" + data[i].CommentName + "\">回复</p>\n" +
+                                                        "                            </div>")
+                                                if (data[i].PositionFlag === "2")
+                                                    $(".commentDataDivId" + data[i].ReplyId).append(
+                                                        "                           <div class=\"commentDataDiv2 commentDataDivId" + data[i].CommentId + "\">\n" +
+                                                        "                                <div class=\"commentImgData\">\n" +
+                                                        "                                    <img class=\"commentDataqq1\" src= \"http://q1.qlogo.cn/g?b=qq&nk=" + data[i].QQ + "&s=40\" >\n" +
+                                                        "                                </div>\n" +
+                                                        "                                <p class=\"commentName1\">" + data[i].CommentName + "</p>\n" +
+                                                        "                                <p class=\"commentText1\">" + "回复" + "<span class=\"replyName \">&nbsp;@" + data[i].ObjName + "&nbsp;:&nbsp;" + "</span>" + data[i].CommentText + "</p>\n" +
+                                                        "                                <p class=\"commentTime1\">" + data[i].CommentTime + "</p>\n" +
+                                                        "                                <p class=\"commentReply1\" data-id =\"" + data[i].CommentId + "\" data-commentName= \"" + data[i].CommentName + "\">回复</p>\n" +
+                                                        "                            </div>")
+                                            }
+                                        }
+                                        $(".commentReply").click(function () {
+                                            $(".conmentDiv1").remove();
+                                            console.log(".conmentDivId" + $(this).attr("data-id"));
+                                            console.log($(this).attr("data-id"));
+                                            $(".commentDataDivId" + $(this).attr("data-id")).append(
+                                                "<div class=\"conmentDiv conmentDiv1 conmentDivId" + $(this).attr("data-id") + "\">\n" +
+                                                "                                  <div class='commentSend1'> " +
+                                                "                            <div class=\"conmentqq\">\n" +
+                                                "                                <img class=\"hrefqq\" src= \"" + hrefqq + "\" >\n" +
+                                                "                            </div>\n" +
+                                                "                            <div>\n" +
+                                                "                                <textarea type=\"text\" maxlength=\"500\" placeholder=\"" + "回复@：" + $(this).attr("data-commentName") + "\"cols=\"80\" rows=\"4\" class=\"inputConment1 sendInputConmentId" + $(this).attr("data-id") + "\"></textarea>\n" +
+                                                "                                <div class=\"conmentSubmit\"  data-conmentSubmitId=\"" + $(this).attr("data-id") + "\" data-objName=\"" + $(this).attr("data-commentName") + "\">回复评论</div>\n" +
+                                                "                            </div>\n" +
+                                                "                            </div>  " +
+                                                "                            </p>");
+
+                                            $(".conmentSubmit").click(function () {
+                                                var myDate = new Date;
+                                                var year = myDate.getFullYear(); //获取当前年
+                                                var mon = myDate.getMonth() + 1; //获取当前月
+                                                var date = myDate.getDate(); //获取当前日
+                                                var commentTime = year + "年" + mon + "月" + date + "日";
+                                                var conmentSubmitId = $(this).attr("data-conmentSubmitId");
+                                                $.ajax({
+                                                    url: "/sendComment2",
+                                                    data: {
+                                                        "talkId": id,
+                                                        "commentName": {{.username}},
+                                                        "qq": {{.qq}},
+                                                        "commentText": $(".sendInputConmentId" + $(this).attr("data-conmentSubmitId")).val(),
+                                                        "commentTime": commentTime,
+                                                        "objName": $(this).attr("data-objName"),
+                                                        "replyId": $(this).attr("data-conmentSubmitId"),
+                                                    },
+                                                    success: function (data, status) {
+                                                        if (data.message === "yes") {
+                                                            console.log(conmentSubmitId)
+                                                            $(".conmentDivId" + conmentSubmitId).before(
+                                                                "                           <div class=\"commentDataDiv1\">\n" +
+                                                                "                                <div class=\"commentImgData\">\n" +
+                                                                "                                    <img class=\"commentDataqq1\" src= \"http://q1.qlogo.cn/g?b=qq&nk=" + {{.qq}} +"&s=40\" >\n" +
+                                                                "                                </div>\n" +
+                                                                "                                <p class=\"commentName1\">" + {{.username}} +"</p>\n" +
+                                                                "                                <p class=\"commentText1\">" + $(".sendInputConmentId" + conmentSubmitId).val() + "</p>\n" +
+                                                                "                                <p class=\"commentTime1\">" + commentTime + "</p>\n" +
+                                                                "                                <p class=\"commentReply1\"></p>\n" +
+                                                                "                            </div>")
+                                                            $.ajax({
+                                                                url: "/commentNum",
+                                                                data: {"tlakId": id},
+                                                                success: function (data, status) {
+                                                                    if (data.message === "yes") {
+                                                                        //数据库
+                                                                        $(".commentNumId" + id).text(data.cnum + "");
+                                                                        $(".commentNumId" + id).parent().addClass("talkViewsNumberColor");
+                                                                    }
+                                                                }
+                                                            });
+                                                            $(".conmentDiv1").remove();
+                                                        }
+                                                    }
+                                                });
+
+                                            })
+                                        })
+                                        $(".commentReply1").click(function () {
+                                            $(".conmentDiv1").remove();
+                                            console.log(".conmentDivId" + $(this).attr("data-id"));
+                                            console.log($(this).attr("data-id"));
+                                            $(".commentDataDivId" + $(this).attr("data-id")).append(
+                                                "<div class=\"conmentDiv conmentDiv1 conmentDivId" + $(this).attr("data-id") + "\">\n" +
+                                                "                                  <div class='commentSend2'> " +
+                                                "                            <div class=\"conmentqq\">\n" +
+                                                "                                <img class=\"hrefqq\" src= \"" + hrefqq + "\" >\n" +
+                                                "                            </div>\n" +
+                                                "                            <div>\n" +
+                                                "                                <textarea type=\"text\" maxlength=\"500\" placeholder=\"" + "回复@：" + $(this).attr("data-commentName") + "\"cols=\"80\" rows=\"4\" class=\"inputConment2 sendInputConmentId" + $(this).attr("data-id") + "\"></textarea>\n" +
+                                                "                                <div class=\"conmentSubmit\"  data-conmentSubmitId=\"" + $(this).attr("data-id") + "\" data-objName=\"" + $(this).attr("data-commentName") + "\">回复评论</div>\n" +
+                                                "                            </div>\n" +
+                                                "                            </div>  " +
+                                                "                            </p>");
+
+                                            $(".conmentSubmit").click(function () {
+                                                var myDate = new Date;
+                                                var year = myDate.getFullYear(); //获取当前年
+                                                var mon = myDate.getMonth() + 1; //获取当前月
+                                                var date = myDate.getDate(); //获取当前日
+                                                var commentTime = year + "年" + mon + "月" + date + "日";
+                                                var conmentSubmitId = $(this).attr("data-conmentSubmitId");
+                                                var objName = $(this).attr("data-objName");
+                                                $.ajax({
+                                                    url: "/sendComment3",
+                                                    data: {
+                                                        "talkId": id,
+                                                        "commentName": {{.username}},
+                                                        "qq": {{.qq}},
+                                                        "commentText": $(".sendInputConmentId" + $(this).attr("data-conmentSubmitId")).val(),
+                                                        "commentTime": commentTime,
+                                                        "objName": $(this).attr("data-objName"),
+                                                        "replyId": $(this).attr("data-conmentSubmitId"),
+                                                    },
+                                                    success: function (data, status) {
+                                                        if (data.message === "yes") {
+                                                            console.log(conmentSubmitId)
+                                                            $(".conmentDivId" + conmentSubmitId).before(
+                                                                "                           <div class=\"commentDataDiv2\">\n" +
+                                                                "                                <div class=\"commentImgData\">\n" +
+                                                                "                                    <img class=\"commentDataqq1\" src= \"http://q1.qlogo.cn/g?b=qq&nk=" + {{.qq}} +"&s=40\" >\n" +
+                                                                "                                </div>\n" +
+                                                                "                                <p class=\"commentName1\">" + {{.username}} +"</p>\n" +
+                                                                "                                <p class=\"commentText1\">" + "<span class=\"replyName \">&nbsp;@" + objName + "&nbsp;:&nbsp;</span>" + $(".sendInputConmentId" + conmentSubmitId).val() + "</p>\n" +
+                                                                "                                <p class=\"commentTime1\">" + commentTime + "</p>\n" +
+                                                                "                                <p class=\"commentReply1\"></p>\n" +
+                                                                "                            </div>")
+                                                            $.ajax({
+                                                                url: "/commentNum",
+                                                                data: {"tlakId": id},
+                                                                success: function (data, status) {
+                                                                    if (data.message === "yes") {
+                                                                        //数据库
+                                                                        $(".commentNumId" + id).text(data.cnum + "");
+                                                                        $(".commentNumId" + id).parent().addClass("talkViewsNumberColor");
+                                                                    }
+                                                                }
+                                                            });
+                                                            $(".conmentDiv1").remove();
+                                                        }
+                                                    }
+                                                });
+
+                                            })
+                                        })
+                                    }
+                                });
+                                //    $(this).children("span.likeNum").text("str");
+                            }
+                        });
+                    }
+                });
+            }
+        });
+        $(".dynamic").click();
+
+        function show_date_time() {
+                window.setTimeout(function() {
+                    show_date_time();
+                }, 1000);
+                var StartTime = "2020-08-13";
+                var date=new Date(StartTime.replace(/-/g, '/'));
+                var today = new Date();
+                var timeold = (today.getTime() - date.getTime());
+                var msPerDay = 24 * 60 * 60 * 1000;
+                var e_daysold = timeold / msPerDay;
+                var daysold = Math.floor(e_daysold);
+                var e_hrsold = (e_daysold - daysold) * 24;
+                var hrsold = Math.floor(e_hrsold);
+                var e_minsold = (e_hrsold - hrsold) * 60;
+                var minsold = Math.floor((e_hrsold - hrsold) * 60);
+                var seconds = Math.floor((e_minsold - minsold) * 60);
+                $('.overTime').html("o(*￣▽￣*)ブ小破站已经运行了"+daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒");
+        }
+        show_date_time();
+
+
+    </script>
+
+</body>
+</html>

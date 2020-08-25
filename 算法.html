@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://localhost -->
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>算法1</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #content-info{
+            width: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #author-info{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        #title{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 2px;
+            font-size: 34px;
+            color: #505050;
+        }
+        .text{
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 2px;
+            font-size: 20px;
+            color: #8c8c8c;
+        }
+        #navBar{
+            width: auto;
+            height: auto;
+            position: fixed;
+            right:0;
+            bottom: 0;
+            background-color: #f0f3f4;
+            text-align: center;
+        }
+        #svg-container{
+            width: 100%;
+            min-width: 0px;
+            margin: 0 10px;
+        }
+        #nav-thumbs{
+            padding: 0 5px;
+        }
+        .nav-thumb{
+            position: relative;
+            margin: 10px auto;
+        }
+        .nav-thumb >p{
+            text-align: center;
+            font-size: 12px;
+            margin: 4px 0 0 0;
+        }
+        .nav-thumb >div{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #c6cfd5;
+        }
+        .nav-thumb img{
+            display: block;
+        }
+        #main-content{
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align:center;
+            background-color: #d0cfd8;
+        }
+        #svg-container >svg{
+            display: block;
+            margin:10px auto;
+            margin-bottom: 0;
+        }
+        #copyright{
+            bottom: 0;
+            left: 50%;
+            margin: 5px auto;
+            font-size: 16px;
+            color: #515151;
+        }
+        #copyright >a{
+            color: #77C;
+        }
+        .number{
+            position: absolute;
+            top:0;
+            left:0;
+            border-top:22px solid #08a1ef;
+            border-right: 22px solid transparent;
+        }
+        .pagenum{
+            font-size: 12px;
+            color: #fff;
+            position: absolute;
+            top: -23px;
+            left: 2px;
+        }
+            #navBar::-webkit-scrollbar{
+            width: 8px;
+            background-color: #f5f5f5;
+        }
+            #navBar::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            border-radius: 8px;
+            background-color: #fff;
+        }
+            #navBar::-webkit-scrollbar-thumb{
+            border-radius: 8px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+            background-color: #6b6b70;
+        }
+        #navBar::-webkit-scrollbar-thumb:hover{
+            background-color: #4a4a4f;
+        }
+
+</style>
+  </head>
+  <body>
+    <div id="main-area">
+      <div id="main-content">
+        <div id="svg-container"><svg height="2718" ed:hSpacing="30" xmlns:ev="http://www.w3.org/2001/xml-events" viewBox="0 0 700 2718" id="page1" width="700" ed:name="Page-1" preserveAspectRadio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ed="https://www.edrawsoft.com/xml/2017/SVGExtensions/" ed:vSpacing="30">
+    <style type="text/css"><![CDATA[
+.st14 {fill:#303030;font-family:微软雅黑;font-size:12pt}
+.st15 {fill:#1d1d1d;font-family:微软雅黑;}
+.st16 {fill:#08a1ef;font-family:微软雅黑;}
+.st13 {fill:#ffffff;font-family:微软雅黑;font-size:14pt}
+]]></style>
+    <defs>
+        <linearGradient x2="0%" x1="0%" id="lg5" y1="0%" y2="100%">
+            <stop stop-color="#ffffff" offset="0"/>
+            <stop stop-color="#f0f5f0" offset="0.25"/>
+            <stop stop-color="#e1ebe1" offset="0.75"/>
+            <stop stop-color="#c8d7c8" offset="1"/>
+        </linearGradient>
+    </defs>
+    <rect height="2710" fill="#ffffff" width="700" y="0" x="0"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="103" transform="matrix(1,0,0,1,116,734)" ed:parentid="101" d="M-35.7,596.9C9.2,412.1,-42.7,-625,52,-625" ed:tosuperid="102" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="105" transform="matrix(1,0,0,1,116,996)" ed:parentid="101" d="M-31.7,334.8C6.1,201.5,-39.7,-362.8,52,-362.8" ed:tosuperid="104" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="107" transform="matrix(1,0,0,1,116,1230)" ed:parentid="101" d="M-23.7,101.2C-0.9,34.3,-20.8,-129.2,52,-129.2" ed:tosuperid="106" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="109" transform="matrix(1,0,0,1,116,1433)" ed:parentid="101" d="M-18.7,-46C0.1,-3.1,1.6,74,52,74" ed:tosuperid="108" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="111" transform="matrix(1,0,0,1,116,1689)" ed:parentid="101" d="M-31,-302.5C5.5,-176.7,-39.1,330.5,52,330.5" ed:tosuperid="110" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="113" transform="matrix(1,0,0,1,116,1946)" ed:parentid="101" d="M-35.3,-559C8.9,-380.8,-42.4,586.9,52,586.9" ed:tosuperid="112" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="117" transform="matrix(1,0,0,1,284,77)" ed:parentid="102" d="M-13.5,32C3.8,32,-9.8,-32,13.5,-32" ed:tosuperid="116" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="125" transform="matrix(1,0,0,1,116,831)" ed:parentid="101" d="M-34.6,500.1C8.3,332.7,-41.9,-528.1,52,-528.1" ed:tosuperid="124" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="127" transform="matrix(1,0,0,1,284,92)" ed:parentid="102" d="M-13.5,16.8C1.1,16.8,-3.5,-16.8,13.5,-16.8" ed:tosuperid="126" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="129" transform="matrix(1,0,0,1,284,107)" ed:parentid="102" d="M-13.5,1.6C-2.3,1.6,4.5,-1.6,13.5,-1.6" ed:tosuperid="128" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="131" transform="matrix(1,0,0,1,284,123)" ed:parentid="102" d="M-13.5,-13.6C0.4,-13.6,-1.9,13.6,13.5,13.6" ed:tosuperid="130" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="133" transform="matrix(1,0,0,1,284,138)" ed:parentid="102" d="M-13.5,-28.8C3.3,-28.8,-8.6,28.8,13.5,28.8" ed:tosuperid="132" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="135" transform="matrix(1,0,0,1,284,153)" ed:parentid="102" d="M-13.5,-44C5.1,-44,-12.7,44,13.5,44" ed:tosuperid="134" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="138" transform="matrix(1,0,0,1,252,278)" ed:parentid="124" d="M-13.5,24.4C2.6,24.4,-6.9,-24.4,13.5,-24.4" ed:tosuperid="137" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="142" transform="matrix(1,0,0,1,252,293)" ed:parentid="124" d="M-13.5,9.2C-0.6,9.2,0.4,-9.2,13.5,-9.2" ed:tosuperid="141" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="144" transform="matrix(1,0,0,1,252,309)" ed:parentid="124" d="M-13.5,-6C-1.3,-6,2.1,6,13.5,6" ed:tosuperid="143" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="146" transform="matrix(1,0,0,1,252,324)" ed:parentid="124" d="M-13.5,-21.2C2,-21.2,-5.5,21.2,13.5,21.2" ed:tosuperid="145" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="148" transform="matrix(1,0,0,1,252,339)" ed:parentid="124" d="M-13.5,-36.4C4.4,-36.4,-11.1,36.4,13.5,36.4" ed:tosuperid="147" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="150" transform="matrix(1,0,0,1,284,556)" ed:parentid="104" d="M-13.5,77.6C5.4,77.6,-13.5,-77.6,13.5,-77.6" ed:tosuperid="149" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="152" transform="matrix(1,0,0,1,284,632)" ed:parentid="104" d="M-13.5,1.6C-2.3,1.6,4.5,-1.6,13.5,-1.6" ed:tosuperid="151" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="154" transform="matrix(1,0,0,1,284,685)" ed:parentid="104" d="M-13.5,-51.6C5.4,-51.6,-13.5,51.6,13.5,51.6" ed:tosuperid="153" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="156" transform="matrix(1,0,0,1,284,700)" ed:parentid="104" d="M-13.5,-66.8C5.4,-66.8,-13.5,66.8,13.5,66.8" ed:tosuperid="155" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="158" transform="matrix(1,0,0,1,284,715)" ed:parentid="104" d="M-13.5,-82C5.4,-82,-13.5,82,13.5,82" ed:tosuperid="157" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="160" transform="matrix(1,0,0,1,284,730)" ed:parentid="104" d="M-13.5,-97.2C5.4,-97.2,-13.5,97.2,13.5,97.2" ed:tosuperid="159" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="162" transform="matrix(1,0,0,1,284,746)" ed:parentid="104" d="M-13.5,-112.4C5.4,-112.4,-13.5,112.4,13.5,112.4" ed:tosuperid="161" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="164" transform="matrix(1,0,0,1,384,455)" ed:parentid="149" d="M-13.5,22.8C2.3,22.8,-6.2,-22.8,13.5,-22.8" ed:tosuperid="163" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="166" transform="matrix(1,0,0,1,384,470)" ed:parentid="149" d="M-13.5,7.6C-0.9,7.6,1.3,-7.6,13.5,-7.6" ed:tosuperid="165" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="168" transform="matrix(1,0,0,1,384,486)" ed:parentid="149" d="M-13.5,-7.6C-0.9,-7.6,1.3,7.6,13.5,7.6" ed:tosuperid="167" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="170" transform="matrix(1,0,0,1,384,501)" ed:parentid="149" d="M-13.5,-22.8C2.3,-22.8,-6.2,22.8,13.5,22.8" ed:tosuperid="169" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="172" transform="matrix(1,0,0,1,375,592)" ed:parentid="151" d="M-13.5,38C4.5,38,-11.5,-38,13.5,-38" ed:tosuperid="171" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="174" transform="matrix(1,0,0,1,375,607)" ed:parentid="151" d="M-13.5,22.8C2.3,22.8,-6.2,-22.8,13.5,-22.8" ed:tosuperid="173" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="176" transform="matrix(1,0,0,1,375,622)" ed:parentid="151" d="M-13.5,7.6C-0.9,7.6,1.3,-7.6,13.5,-7.6" ed:tosuperid="175" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="178" transform="matrix(1,0,0,1,375,638)" ed:parentid="151" d="M-13.5,-7.6C-0.9,-7.6,1.3,7.6,13.5,7.6" ed:tosuperid="177" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="180" transform="matrix(1,0,0,1,375,653)" ed:parentid="151" d="M-13.5,-22.8C2.3,-22.8,-6.2,22.8,13.5,22.8" ed:tosuperid="179" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="182" transform="matrix(1,0,0,1,375,668)" ed:parentid="151" d="M-13.5,-38C4.5,-38,-11.5,38,13.5,38" ed:tosuperid="181" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="184" transform="matrix(1,0,0,1,284,1008)" ed:parentid="106" d="M-13.5,92.8C5.4,92.8,-13.5,-92.8,13.5,-92.8" ed:tosuperid="183" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="186" transform="matrix(1,0,0,1,284,1046)" ed:parentid="106" d="M-13.5,54.8C5.4,54.8,-13.5,-54.8,13.5,-54.8" ed:tosuperid="185" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="188" transform="matrix(1,0,0,1,284,1084)" ed:parentid="106" d="M-13.5,16.8C1.1,16.8,-3.5,-16.8,13.5,-16.8" ed:tosuperid="187" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="190" transform="matrix(1,0,0,1,284,1099)" ed:parentid="106" d="M-13.5,1.6C-2.3,1.6,4.5,-1.6,13.5,-1.6" ed:tosuperid="189" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="192" transform="matrix(1,0,0,1,284,1114)" ed:parentid="106" d="M-13.5,-13.6C0.4,-13.6,-1.9,13.6,13.5,13.6" ed:tosuperid="191" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="194" transform="matrix(1,0,0,1,284,1129)" ed:parentid="106" d="M-13.5,-28.8C3.3,-28.8,-8.6,28.8,13.5,28.8" ed:tosuperid="193" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="196" transform="matrix(1,0,0,1,284,1144)" ed:parentid="106" d="M-13.5,-44C5.1,-44,-12.7,44,13.5,44" ed:tosuperid="195" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="199" transform="matrix(1,0,0,1,284,1160)" ed:parentid="106" d="M-13.5,-59.2C5.4,-59.2,-13.5,59.2,13.5,59.2" ed:tosuperid="198" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="201" transform="matrix(1,0,0,1,284,1175)" ed:parentid="106" d="M-13.5,-74.4C5.4,-74.4,-13.5,74.4,13.5,74.4" ed:tosuperid="200" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="203" transform="matrix(1,0,0,1,284,1190)" ed:parentid="106" d="M-13.5,-89.6C5.4,-89.6,-13.5,89.6,13.5,89.6" ed:tosuperid="202" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="205" transform="matrix(1,0,0,1,357,983)" ed:parentid="185" d="M-13.5,7.6C-0.9,7.6,1.3,-7.6,13.5,-7.6" ed:tosuperid="204" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="207" transform="matrix(1,0,0,1,357,998)" ed:parentid="185" d="M-13.5,-7.6C-0.9,-7.6,1.3,7.6,13.5,7.6" ed:tosuperid="206" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="209" transform="matrix(1,0,0,1,357,1014)" ed:parentid="185" d="M-13.5,-22.8C2.3,-22.8,-6.2,22.8,13.5,22.8" ed:tosuperid="208" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="211" transform="matrix(1,0,0,1,357,968)" ed:parentid="185" d="M-13.5,22.8C2.3,22.8,-6.2,-22.8,13.5,-22.8" ed:tosuperid="210" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="213" transform="matrix(1,0,0,1,284,1205)" ed:parentid="106" d="M-13.5,-104.8C5.4,-104.8,-13.5,104.8,13.5,104.8" ed:tosuperid="212" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="215" transform="matrix(1,0,0,1,252,1437)" ed:parentid="108" d="M-13.5,70C5.4,70,-13.5,-70,13.5,-70" ed:tosuperid="214" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="217" transform="matrix(1,0,0,1,252,1452)" ed:parentid="108" d="M-13.5,54.8C5.4,54.8,-13.5,-54.8,13.5,-54.8" ed:tosuperid="216" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="219" transform="matrix(1,0,0,1,252,1467)" ed:parentid="108" d="M-13.5,39.6C4.7,39.6,-11.9,-39.6,13.5,-39.6" ed:tosuperid="218" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="221" transform="matrix(1,0,0,1,252,1490)" ed:parentid="108" d="M-13.5,16.8C1.1,16.8,-3.5,-16.8,13.5,-16.8" ed:tosuperid="220" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="223" transform="matrix(1,0,0,1,252,1521)" ed:parentid="108" d="M-13.5,-13.6C0.4,-13.6,-1.9,13.6,13.5,13.6" ed:tosuperid="222" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="225" transform="matrix(1,0,0,1,252,1543)" ed:parentid="108" d="M-13.5,-36.4C4.4,-36.4,-11.1,36.4,13.5,36.4" ed:tosuperid="224" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="227" transform="matrix(1,0,0,1,338,1466)" ed:parentid="220" d="M-13.5,7.6C-0.9,7.6,1.3,-7.6,13.5,-7.6" ed:tosuperid="226" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="229" transform="matrix(1,0,0,1,338,1481)" ed:parentid="220" d="M-13.5,-7.6C-0.9,-7.6,1.3,7.6,13.5,7.6" ed:tosuperid="228" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="231" transform="matrix(1,0,0,1,338,1527)" ed:parentid="222" d="M-13.5,7.6C-0.9,7.6,1.3,-7.6,13.5,-7.6" ed:tosuperid="230" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="233" transform="matrix(1,0,0,1,338,1542)" ed:parentid="222" d="M-13.5,-7.6C-0.9,-7.6,1.3,7.6,13.5,7.6" ed:tosuperid="232" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="235" transform="matrix(1,0,0,1,252,1559)" ed:parentid="108" d="M-13.5,-51.6C5.4,-51.6,-13.5,51.6,13.5,51.6" ed:tosuperid="234" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="237" transform="matrix(1,0,0,1,252,1574)" ed:parentid="108" d="M-13.5,-66.8C5.4,-66.8,-13.5,66.8,13.5,66.8" ed:tosuperid="236" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="239" transform="matrix(1,0,0,1,252,1589)" ed:parentid="108" d="M-13.5,-82C5.4,-82,-13.5,82,13.5,82" ed:tosuperid="238" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="241" transform="matrix(1,0,0,1,252,1927)" ed:parentid="110" d="M-13.5,92.8C5.4,92.8,-13.5,-92.8,13.5,-92.8" ed:tosuperid="240" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="243" transform="matrix(1,0,0,1,252,2041)" ed:parentid="110" d="M-13.5,-21.2C2,-21.2,-5.5,21.2,13.5,21.2" ed:tosuperid="242" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="245" transform="matrix(1,0,0,1,252,2140)" ed:parentid="110" d="M-13.5,-120C5.4,-120,-13.5,120,13.5,120" ed:tosuperid="244" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="247" transform="matrix(1,0,0,1,352,1781)" ed:parentid="240" d="M-13.5,53.2C5.4,53.2,-13.5,-53.2,13.5,-53.2" ed:tosuperid="246" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="249" transform="matrix(1,0,0,1,352,1796)" ed:parentid="240" d="M-13.5,38C4.5,38,-11.5,-38,13.5,-38" ed:tosuperid="248" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="251" transform="matrix(1,0,0,1,352,1811)" ed:parentid="240" d="M-13.5,22.8C2.3,22.8,-6.2,-22.8,13.5,-22.8" ed:tosuperid="250" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="253" transform="matrix(1,0,0,1,352,1827)" ed:parentid="240" d="M-13.5,7.6C-0.9,7.6,1.3,-7.6,13.5,-7.6" ed:tosuperid="252" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="255" transform="matrix(1,0,0,1,352,1842)" ed:parentid="240" d="M-13.5,-7.6C-0.9,-7.6,1.3,7.6,13.5,7.6" ed:tosuperid="254" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="257" transform="matrix(1,0,0,1,352,1857)" ed:parentid="240" d="M-13.5,-22.8C2.3,-22.8,-6.2,22.8,13.5,22.8" ed:tosuperid="256" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="259" transform="matrix(1,0,0,1,352,1872)" ed:parentid="240" d="M-13.5,-38C4.5,-38,-11.5,38,13.5,38" ed:tosuperid="258" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="261" transform="matrix(1,0,0,1,352,1887)" ed:parentid="240" d="M-13.5,-53.2C5.4,-53.2,-13.5,53.2,13.5,53.2" ed:tosuperid="260" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="265" transform="matrix(1,0,0,1,325,2017)" ed:parentid="242" d="M-13.5,45.6C5.2,45.6,-12.9,-45.6,13.5,-45.6" ed:tosuperid="264" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="267" transform="matrix(1,0,0,1,325,2032)" ed:parentid="242" d="M-13.5,30.4C3.6,30.4,-9.2,-30.4,13.5,-30.4" ed:tosuperid="266" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="269" transform="matrix(1,0,0,1,325,2047)" ed:parentid="242" d="M-13.5,15.2C0.8,15.2,-2.7,-15.2,13.5,-15.2" ed:tosuperid="268" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="271" transform="matrix(1,0,0,1,325,2062)" ed:parentid="242" d="M-13.5,0C-2.7,0,5.4,0,13.5,0" ed:tosuperid="270" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="273" transform="matrix(1,0,0,1,325,2077)" ed:parentid="242" d="M-13.5,-15.2C0.8,-15.2,-2.7,15.2,13.5,15.2" ed:tosuperid="272" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="275" transform="matrix(1,0,0,1,325,2093)" ed:parentid="242" d="M-13.5,-30.4C3.6,-30.4,-9.2,30.4,13.5,30.4" ed:tosuperid="274" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="279" transform="matrix(1,0,0,1,338,2222)" ed:parentid="244" d="M-13.5,38C4.5,38,-11.5,-38,13.5,-38" ed:tosuperid="278" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="281" transform="matrix(1,0,0,1,338,2237)" ed:parentid="244" d="M-13.5,22.8C2.3,22.8,-6.2,-22.8,13.5,-22.8" ed:tosuperid="280" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="283" transform="matrix(1,0,0,1,284,2463)" ed:parentid="112" d="M-13.5,70C5.4,70,-13.5,-70,13.5,-70" ed:tosuperid="282" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="285" transform="matrix(1,0,0,1,284,2478)" ed:parentid="112" d="M-13.5,54.8C5.4,54.8,-13.5,-54.8,13.5,-54.8" ed:tosuperid="284" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="287" transform="matrix(1,0,0,1,284,2493)" ed:parentid="112" d="M-13.5,39.6C4.7,39.6,-11.9,-39.6,13.5,-39.6" ed:tosuperid="286" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="289" transform="matrix(1,0,0,1,284,2508)" ed:parentid="112" d="M-13.5,24.4C2.6,24.4,-6.9,-24.4,13.5,-24.4" ed:tosuperid="288" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="291" transform="matrix(1,0,0,1,284,2524)" ed:parentid="112" d="M-13.5,9.2C-0.6,9.2,0.4,-9.2,13.5,-9.2" ed:tosuperid="290" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="293" transform="matrix(1,0,0,1,284,2539)" ed:parentid="112" d="M-13.5,-6C-1.3,-6,2.1,6,13.5,6" ed:tosuperid="292" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="296" transform="matrix(1,0,0,1,284,2554)" ed:parentid="112" d="M-13.5,-21.2C2,-21.2,-5.5,21.2,13.5,21.2" ed:tosuperid="295" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="298" transform="matrix(1,0,0,1,284,2569)" ed:parentid="112" d="M-13.5,-36.4C4.4,-36.4,-11.1,36.4,13.5,36.4" ed:tosuperid="297" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="300" transform="matrix(1,0,0,1,284,2584)" ed:parentid="112" d="M-13.5,-51.6C5.4,-51.6,-13.5,51.6,13.5,51.6" ed:tosuperid="299" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="302" transform="matrix(1,0,0,1,284,2600)" ed:parentid="112" d="M-13.5,-66.8C5.4,-66.8,-13.5,66.8,13.5,66.8" ed:tosuperid="301" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="304" transform="matrix(1,0,0,1,284,2615)" ed:parentid="112" d="M-13.5,-82C5.4,-82,-13.5,82,13.5,82" ed:tosuperid="303" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="306" transform="matrix(1,0,0,1,325,2108)" ed:parentid="242" d="M-13.5,-45.6C5.2,-45.6,-12.9,45.6,13.5,45.6" ed:tosuperid="305" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="310" transform="matrix(1,0,0,1,338,2252)" ed:parentid="244" d="M-13.5,7.6C-0.9,7.6,1.3,-7.6,13.5,-7.6" ed:tosuperid="309" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="314" transform="matrix(1,0,0,1,338,2267)" ed:parentid="244" d="M-13.5,-7.6C-0.9,-7.6,1.3,7.6,13.5,7.6" ed:tosuperid="313" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="316" transform="matrix(1,0,0,1,338,2283)" ed:parentid="244" d="M-13.5,-22.8C2.3,-22.8,-6.2,22.8,13.5,22.8" ed:tosuperid="315" stroke-linejoin="round"/>
+    <path stroke-linecap="round" stroke="#696969" fill="none" id="318" transform="matrix(1,0,0,1,338,2298)" ed:parentid="244" d="M-13.5,-38C4.5,-38,-11.5,38,13.5,38" ed:tosuperid="317" stroke-linejoin="round"/>
+    <g id="101" transform="matrix(1,0,0,1,23,1331)" ed:width="81.8" ed:height="56" ed:topictype="mainidea" ed:layout="rightmap">
+        <path fill="#435fbc" stroke="#435fbc" stroke-width="3" d="M4,0L77.8,0C80.5,0,81.8,1.3,81.8,4L81.8,52C81.8,54.7,80.5,56,77.8,56L4,56C1.3,56,0,54.7,0,52L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st13">
+            <tspan y="34.3" style="white-space:pre" x="21">算法</tspan>
+        </text>
+    </g>
+    <g id="102" transform="matrix(1,0,0,1,168,90)" ed:parentid="101" ed:width="103" ed:height="37.6">
+        <path fill="#ebecf3" stroke="#ebecf3" d="M4,0L99,0C101.7,0,103,1.3,103,4L103,33.6C103,36.3,101.7,37.6,99,37.6L4,37.6C1.3,37.6,0,36.3,0,33.6L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st14">
+            <tspan y="23.9" style="white-space:pre" x="18">基础算法</tspan>
+        </text>
+    </g>
+    <g id="104" transform="matrix(1,0,0,1,168,614)" ed:parentid="101" ed:width="103" ed:height="37.6">
+        <path fill="#ebecf3" stroke="#ebecf3" d="M4,0L99,0C101.7,0,103,1.3,103,4L103,33.6C103,36.3,101.7,37.6,99,37.6L4,37.6C1.3,37.6,0,36.3,0,33.6L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st14">
+            <tspan y="23.9" style="white-space:pre" x="18">动态规划</tspan>
+        </text>
+    </g>
+    <g id="106" transform="matrix(1,0,0,1,168,1082)" ed:parentid="101" ed:width="103" ed:height="37.6">
+        <path fill="#ebecf3" stroke="#ebecf3" d="M4,0L99,0C101.7,0,103,1.3,103,4L103,33.6C103,36.3,101.7,37.6,99,37.6L4,37.6C1.3,37.6,0,36.3,0,33.6L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st14">
+            <tspan y="23.9" style="white-space:pre" x="18">数据结构</tspan>
+        </text>
+    </g>
+    <g id="108" transform="matrix(1,0,0,1,168,1488)" ed:parentid="101" ed:width="71" ed:height="37.6">
+        <path fill="#ebecf3" stroke="#ebecf3" d="M4,0L67,0C69.7,0,71,1.3,71,4L71,33.6C71,36.3,69.7,37.6,67,37.6L4,37.6C1.3,37.6,0,36.3,0,33.6L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st14">
+            <tspan y="23.9" style="white-space:pre" x="18">图论</tspan>
+        </text>
+    </g>
+    <g id="110" transform="matrix(1,0,0,1,168,2001)" ed:parentid="101" ed:width="71" ed:height="37.6">
+        <path fill="#ebecf3" stroke="#ebecf3" d="M4,0L67,0C69.7,0,71,1.3,71,4L71,33.6C71,36.3,69.7,37.6,67,37.6L4,37.6C1.3,37.6,0,36.3,0,33.6L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st14">
+            <tspan y="23.9" style="white-space:pre" x="18">数学</tspan>
+        </text>
+    </g>
+    <g id="112" transform="matrix(1,0,0,1,168,2514)" ed:parentid="101" ed:width="103" ed:height="37.6">
+        <path fill="#ebecf3" stroke="#ebecf3" d="M4,0L99,0C101.7,0,103,1.3,103,4L103,33.6C103,36.3,101.7,37.6,99,37.6L4,37.6C1.3,37.6,0,36.3,0,33.6L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st14">
+            <tspan y="23.9" style="white-space:pre" x="18">计算几何</tspan>
+        </text>
+    </g>
+    <g id="116" transform="matrix(1,0,0,1,298,21)" ed:parentid="102" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st16">
+            <tspan y="16.1" style="white-space:pre; cursor: pointer;" x="8" onclick="window.open('http://www.baidu.com')">枚举</tspan>
+        </text>
+    </g>
+    <g id="124" transform="matrix(1,0,0,1,168,284)" ed:parentid="101" ed:width="71" ed:height="37.6">
+        <path fill="#ebecf3" stroke="#ebecf3" d="M4,0L67,0C69.7,0,71,1.3,71,4L71,33.6C71,36.3,69.7,37.6,67,37.6L4,37.6C1.3,37.6,0,36.3,0,33.6L0,4C0,1.3,1.3,0,4,0z" stroke-linejoin="round"/>
+        <text class="st14">
+            <tspan y="23.9" style="white-space:pre" x="18">搜索</tspan>
+        </text>
+    </g>
+    <g id="126" transform="matrix(1,0,0,1,298,51)" ed:parentid="102" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">贪心</tspan>
+        </text>
+    </g>
+    <g id="128" transform="matrix(1,0,0,1,298,82)" ed:parentid="102" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">递归和分治</tspan>
+        </text>
+    </g>
+    <g id="130" transform="matrix(1,0,0,1,298,112)" ed:parentid="102" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">递推</tspan>
+        </text>
+    </g>
+    <g id="132" transform="matrix(1,0,0,1,298,143)" ed:parentid="102" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">构造</tspan>
+        </text>
+    </g>
+    <g id="134" transform="matrix(1,0,0,1,298,173)" ed:parentid="102" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">模拟</tspan>
+        </text>
+    </g>
+    <g id="137" transform="matrix(1,0,0,1,266,230)" ed:parentid="124" ed:width="143.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L143.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">深度优先搜索（DFS)</tspan>
+        </text>
+    </g>
+    <g id="141" transform="matrix(1,0,0,1,266,260)" ed:parentid="124" ed:width="142" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L142,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">广度优先搜索（BFS)</tspan>
+        </text>
+    </g>
+    <g id="143" transform="matrix(1,0,0,1,266,291)" ed:parentid="124" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">双向搜索</tspan>
+        </text>
+    </g>
+    <g id="145" transform="matrix(1,0,0,1,266,321)" ed:parentid="124" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">启发式搜索</tspan>
+        </text>
+    </g>
+    <g id="147" transform="matrix(1,0,0,1,266,352)" ed:parentid="124" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">记忆化搜索</tspan>
+        </text>
+    </g>
+    <g id="149" transform="matrix(1,0,0,1,298,454)" ed:parentid="104" ed:width="72.40000000000001" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L72.4,0L72.4,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">背包问题</tspan>
+        </text>
+    </g>
+    <g id="151" transform="matrix(1,0,0,1,298,606)" ed:parentid="104" ed:width="63.6" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L63.6,0L63.6,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L63.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">基本DP</tspan>
+        </text>
+    </g>
+    <g id="153" transform="matrix(1,0,0,1,298,712)" ed:parentid="104" ed:width="104.4" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L104.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">二分判断型DP</tspan>
+        </text>
+    </g>
+    <g id="155" transform="matrix(1,0,0,1,298,743)" ed:parentid="104" ed:width="99.59999999999999" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L99.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">树形动态规划</tspan>
+        </text>
+    </g>
+    <g id="157" transform="matrix(1,0,0,1,298,773)" ed:parentid="104" ed:width="90.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L90.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">状态压缩DP</tspan>
+        </text>
+    </g>
+    <g id="159" transform="matrix(1,0,0,1,298,804)" ed:parentid="104" ed:width="126.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L126.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">四边形不等式理论</tspan>
+        </text>
+    </g>
+    <g id="161" transform="matrix(1,0,0,1,298,834)" ed:parentid="104" ed:width="99.59999999999999" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L99.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">单调队列优化</tspan>
+        </text>
+    </g>
+    <g id="163" transform="matrix(1,0,0,1,397,408)" ed:parentid="149" ed:width="61.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L61.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">01背包</tspan>
+        </text>
+    </g>
+    <g id="165" transform="matrix(1,0,0,1,397,439)" ed:parentid="149" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">完全背包</tspan>
+        </text>
+    </g>
+    <g id="167" transform="matrix(1,0,0,1,397,469)" ed:parentid="149" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">多维背包</tspan>
+        </text>
+    </g>
+    <g id="169" transform="matrix(1,0,0,1,397,500)" ed:parentid="149" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">多重背包</tspan>
+        </text>
+    </g>
+    <g id="171" transform="matrix(1,0,0,1,388,530)" ed:parentid="151" ed:width="63.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L63.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">区间DP</tspan>
+        </text>
+    </g>
+    <g id="173" transform="matrix(1,0,0,1,388,560)" ed:parentid="151" ed:width="63.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L63.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">环形DP</tspan>
+        </text>
+    </g>
+    <g id="175" transform="matrix(1,0,0,1,388,591)" ed:parentid="151" ed:width="77.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L77.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">判定性DP</tspan>
+        </text>
+    </g>
+    <g id="177" transform="matrix(1,0,0,1,388,621)" ed:parentid="151" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">棋盘分割</tspan>
+        </text>
+    </g>
+    <g id="179" transform="matrix(1,0,0,1,388,652)" ed:parentid="151" ed:width="113.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L113.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">最长公共子序列</tspan>
+        </text>
+    </g>
+    <g id="181" transform="matrix(1,0,0,1,388,682)" ed:parentid="151" ed:width="113.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L113.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">最长上升子序列</tspan>
+        </text>
+    </g>
+    <g id="183" transform="matrix(1,0,0,1,298,891)" ed:parentid="106" ed:width="48.4" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L48.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">KMP</tspan>
+        </text>
+    </g>
+    <g id="185" transform="matrix(1,0,0,1,298,967)" ed:parentid="106" ed:width="45.2" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L45.2,0L45.2,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">排序</tspan>
+        </text>
+    </g>
+    <g id="187" transform="matrix(1,0,0,1,298,1043)" ed:parentid="106" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">哈希表</tspan>
+        </text>
+    </g>
+    <g id="189" transform="matrix(1,0,0,1,298,1073)" ed:parentid="106" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">二分</tspan>
+        </text>
+    </g>
+    <g id="191" transform="matrix(1,0,0,1,298,1104)" ed:parentid="106" ed:width="59.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L59.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">并查集</tspan>
+        </text>
+    </g>
+    <g id="193" transform="matrix(1,0,0,1,298,1134)" ed:parentid="106" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">霍夫曼树</tspan>
+        </text>
+    </g>
+    <g id="195" transform="matrix(1,0,0,1,298,1165)" ed:parentid="106" ed:width="31.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L31.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">堆</tspan>
+        </text>
+    </g>
+    <g id="198" transform="matrix(1,0,0,1,298,1195)" ed:parentid="106" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">线段树</tspan>
+        </text>
+    </g>
+    <g id="200" transform="matrix(1,0,0,1,298,1225)" ed:parentid="106" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">二叉树</tspan>
+        </text>
+    </g>
+    <g id="202" transform="matrix(1,0,0,1,298,1256)" ed:parentid="106" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">树状数组</tspan>
+        </text>
+    </g>
+    <g id="204" transform="matrix(1,0,0,1,370,952)" ed:parentid="185" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">快排</tspan>
+        </text>
+    </g>
+    <g id="206" transform="matrix(1,0,0,1,370,982)" ed:parentid="185" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">归并排</tspan>
+        </text>
+    </g>
+    <g id="208" transform="matrix(1,0,0,1,370,1013)" ed:parentid="185" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">堆排序</tspan>
+        </text>
+    </g>
+    <g id="210" transform="matrix(1,0,0,1,370,921)" ed:parentid="185" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">冒泡排序</tspan>
+        </text>
+    </g>
+    <g id="212" transform="matrix(1,0,0,1,298,1286)" ed:parentid="106" ed:width="51.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L51.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">RMQ</tspan>
+        </text>
+    </g>
+    <g id="214" transform="matrix(1,0,0,1,266,1343)" ed:parentid="108" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">拓扑排序</tspan>
+        </text>
+    </g>
+    <g id="216" transform="matrix(1,0,0,1,266,1373)" ed:parentid="108" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">最小生成树</tspan>
+        </text>
+    </g>
+    <g id="218" transform="matrix(1,0,0,1,266,1404)" ed:parentid="108" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">最短路</tspan>
+        </text>
+    </g>
+    <g id="220" transform="matrix(1,0,0,1,266,1449)" ed:parentid="108" ed:width="58.8" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L58.8,0L58.8,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">二分图</tspan>
+        </text>
+    </g>
+    <g id="222" transform="matrix(1,0,0,1,266,1510)" ed:parentid="108" ed:width="58.8" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L58.8,0L58.8,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">网络流</tspan>
+        </text>
+    </g>
+    <g id="224" transform="matrix(1,0,0,1,266,1556)" ed:parentid="108" ed:width="167.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L167.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">差分约束系统建立与求解</tspan>
+        </text>
+    </g>
+    <g id="226" transform="matrix(1,0,0,1,352,1434)" ed:parentid="220" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">匈牙利算法</tspan>
+        </text>
+    </g>
+    <g id="228" transform="matrix(1,0,0,1,352,1465)" ed:parentid="220" ed:width="67.59999999999999" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L67.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="7">KM算法</tspan>
+        </text>
+    </g>
+    <g id="230" transform="matrix(1,0,0,1,352,1495)" ed:parentid="222" ed:width="113.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L113.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">最小费用最大流</tspan>
+        </text>
+    </g>
+    <g id="232" transform="matrix(1,0,0,1,352,1525)" ed:parentid="222" ed:width="167.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L167.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">最小割模型、网络流规约</tspan>
+        </text>
+    </g>
+    <g id="234" transform="matrix(1,0,0,1,266,1586)" ed:parentid="108" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">双连通分量</tspan>
+        </text>
+    </g>
+    <g id="236" transform="matrix(1,0,0,1,266,1617)" ed:parentid="108" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">强连通分支</tspan>
+        </text>
+    </g>
+    <g id="238" transform="matrix(1,0,0,1,266,1647)" ed:parentid="108" ed:width="113.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L113.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">图的割边与割点</tspan>
+        </text>
+    </g>
+    <g id="240" transform="matrix(1,0,0,1,266,1810)" ed:parentid="110" ed:width="72.40000000000001" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L72.4,0L72.4,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">组合数学</tspan>
+        </text>
+    </g>
+    <g id="242" transform="matrix(1,0,0,1,266,2038)" ed:parentid="110" ed:width="45.2" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L45.2,0L45.2,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">数论</tspan>
+        </text>
+    </g>
+    <g id="244" transform="matrix(1,0,0,1,266,2236)" ed:parentid="110" ed:width="58.8" ed:height="23.9">
+        <path fill="#ebebeb" d="M0,0L58.8,0L58.8,23.9L0,23.9L0,0z"/>
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">博弈论</tspan>
+        </text>
+    </g>
+    <g id="246" transform="matrix(1,0,0,1,365,1704)" ed:parentid="240" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">排列组合</tspan>
+        </text>
+    </g>
+    <g id="248" transform="matrix(1,0,0,1,365,1734)" ed:parentid="240" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">递推关系</tspan>
+        </text>
+    </g>
+    <g id="250" transform="matrix(1,0,0,1,365,1765)" ed:parentid="240" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">容斥原理</tspan>
+        </text>
+    </g>
+    <g id="252" transform="matrix(1,0,0,1,365,1795)" ed:parentid="240" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">抽屉原理</tspan>
+        </text>
+    </g>
+    <g id="254" transform="matrix(1,0,0,1,365,1826)" ed:parentid="240" ed:width="135.6" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L135.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">置换群与polya定理</tspan>
+        </text>
+    </g>
+    <g id="256" transform="matrix(1,0,0,1,365,1856)" ed:parentid="240" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">母函数</tspan>
+        </text>
+    </g>
+    <g id="258" transform="matrix(1,0,0,1,365,1886)" ed:parentid="240" ed:width="94.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L94.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">Mobius反演</tspan>
+        </text>
+    </g>
+    <g id="260" transform="matrix(1,0,0,1,365,1917)" ed:parentid="240" ed:width="99.59999999999999" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L99.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">偏序关系定理</tspan>
+        </text>
+    </g>
+    <g id="264" transform="matrix(1,0,0,1,338,1947)" ed:parentid="242" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">素数与整数</tspan>
+        </text>
+    </g>
+    <g id="266" transform="matrix(1,0,0,1,338,1978)" ed:parentid="242" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">进制位</tspan>
+        </text>
+    </g>
+    <g id="268" transform="matrix(1,0,0,1,338,2008)" ed:parentid="242" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">同余模运行</tspan>
+        </text>
+    </g>
+    <g id="270" transform="matrix(1,0,0,1,338,2038)" ed:parentid="242" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">高斯消元</tspan>
+        </text>
+    </g>
+    <g id="272" transform="matrix(1,0,0,1,338,2069)" ed:parentid="242" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">概率问题</tspan>
+        </text>
+    </g>
+    <g id="274" transform="matrix(1,0,0,1,338,2099)" ed:parentid="242" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">欧几里德</tspan>
+        </text>
+    </g>
+    <g id="278" transform="matrix(1,0,0,1,352,2160)" ed:parentid="244" ed:width="99.59999999999999" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L99.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">极大极小过程</tspan>
+        </text>
+    </g>
+    <g id="280" transform="matrix(1,0,0,1,352,2190)" ed:parentid="244" ed:width="73.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L73.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">Nim过程</tspan>
+        </text>
+    </g>
+    <g id="282" transform="matrix(1,0,0,1,298,2369)" ed:parentid="112" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">几何公式</tspan>
+        </text>
+    </g>
+    <g id="284" transform="matrix(1,0,0,1,298,2399)" ed:parentid="112" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">叉积和点积</tspan>
+        </text>
+    </g>
+    <g id="286" transform="matrix(1,0,0,1,298,2430)" ed:parentid="112" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">多边形算法</tspan>
+        </text>
+    </g>
+    <g id="288" transform="matrix(1,0,0,1,298,2460)" ed:parentid="112" ed:width="45.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L45.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">凸包</tspan>
+        </text>
+    </g>
+    <g id="290" transform="matrix(1,0,0,1,298,2490)" ed:parentid="112" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">扫描线算法</tspan>
+        </text>
+    </g>
+    <g id="292" transform="matrix(1,0,0,1,298,2521)" ed:parentid="112" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">多边形内核</tspan>
+        </text>
+    </g>
+    <g id="295" transform="matrix(1,0,0,1,298,2551)" ed:parentid="112" ed:width="140.4" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L140.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">几何工具的综合应用</tspan>
+        </text>
+    </g>
+    <g id="297" transform="matrix(1,0,0,1,298,2582)" ed:parentid="112" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">半平面求交</tspan>
+        </text>
+    </g>
+    <g id="299" transform="matrix(1,0,0,1,298,2612)" ed:parentid="112" ed:width="99.59999999999999" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L99.6,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">可视图的建立</tspan>
+        </text>
+    </g>
+    <g id="301" transform="matrix(1,0,0,1,298,2642)" ed:parentid="112" ed:width="113.2" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L113.2,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">点集最小圆覆盖</tspan>
+        </text>
+    </g>
+    <g id="303" transform="matrix(1,0,0,1,298,2673)" ed:parentid="112" ed:width="58.8" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L58.8,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">对踵点</tspan>
+        </text>
+    </g>
+    <g id="305" transform="matrix(1,0,0,1,338,2130)" ed:parentid="242" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">欧拉函数</tspan>
+        </text>
+    </g>
+    <g id="309" transform="matrix(1,0,0,1,352,2221)" ed:parentid="244" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">巴什博弈</tspan>
+        </text>
+    </g>
+    <g id="313" transform="matrix(1,0,0,1,352,2251)" ed:parentid="244" ed:width="86" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L86,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">威佐夫博弈</tspan>
+        </text>
+    </g>
+    <g id="315" transform="matrix(1,0,0,1,352,2282)" ed:parentid="244" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">尼姆博弈</tspan>
+        </text>
+    </g>
+    <g id="317" transform="matrix(1,0,0,1,352,2312)" ed:parentid="244" ed:width="72.40000000000001" ed:height="23.9">
+        <path stroke="#696969" fill="none" d="M0,23.9L72.4,23.9" stroke-linejoin="round"/>
+        <text class="st15">
+            <tspan y="16.1" style="white-space:pre" x="8">组合博弈</tspan>
+        </text>
+    </g>
+    <symbol id="plus">
+        <path fill="url(#lg5)" d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6z"/>
+        <path fill="none" stroke="#46a000" stroke-width="0.7" d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6zM3,6L9,6M6,3L6,9"/>
+    </symbol>
+    <symbol id="minus">
+        <path fill="url(#lg5)" d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6z"/>
+        <path fill="none" stroke="#46a000" stroke-width="0.7" d="M11,6C11,8.8,8.8,11,6,11C3.2,11,1,8.8,1,6C1,3.2,3.2,1,6,1C8.8,1,11,3.2,11,6zM3,6L9,6"/>
+    </symbol>
+    <g transform="translate(106,1353)" ed:togtopicid="101">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(272,103)" ed:togtopicid="102">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(272,627)" ed:togtopicid="104">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(272,1094)" ed:togtopicid="106">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(240,1501)" ed:togtopicid="108">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(240,2014)" ed:togtopicid="110">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(272,2527)" ed:togtopicid="112">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(240,297)" ed:togtopicid="124">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(371,460)" ed:togtopicid="149">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(362,612)" ed:togtopicid="151">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(344,973)" ed:togtopicid="185">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(326,1455)" ed:togtopicid="220">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(326,1516)" ed:togtopicid="222">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(339,1816)" ed:togtopicid="240">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(312,2044)" ed:togtopicid="242">
+        <use xlink:href="#minus"/>
+    </g>
+    <g transform="translate(326,2242)" ed:togtopicid="244">
+        <use xlink:href="#minus"/>
+    </g>
+</svg>
+  </body>
+</html>

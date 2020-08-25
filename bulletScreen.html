@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹弹弹弹弹..幕.......</title>
+    <link rel="stylesheet" href="css/bulletScreen.css">
+</head>
+<body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <div class="bulletScreen">
+
+        <audio id="audio" src="./music/爱所能做的事情还有什么.mp3"   autoplay="autoplay" loop="ture">
+        </audio>
+        <div class="bulletScreenArea">
+            <div class="turntables" data-flag = "0">
+                <div class="rotate-img rotate-img1"></div>
+            </div>
+        </div>
+        <div class="SendbulletScreen">
+
+            <div class = "bulletScreenqqurl"> <img class="bulletScreenhrefqq" src= "http://q1.qlogo.cn/g?b=qq&nk={{.qq}}&s=100" > </div>
+            <input class="bulletScreeninput" placeholder="动动小手发弹幕。。。" maxlength="50">  </input>
+            <div class="bulletScreenbutton"> 发送 </div>
+        </div>
+    </div>
+    <script>
+        var color1 = ['#ff0000','#eb4310','#f6941d','#fbb417','#ffff00','#cdd541','#99cc33','#3f9337','#219167','#239676','#24998d','#1f9baa','#800080','#a1488e','#c71585','#bd2158'];
+        $.ajax({
+            url: "/bulletScreenMysqldata",
+            data: {
+                "msg":"yes",
+            },
+            success: function (data, status) {
+                console.log(data)
+                var i = 0;
+                var timer = setInterval(() => {
+                    i = i % data.length;
+                    add(data[i].QQ, data[i].UserName, data[i].BulletScreenText)
+                    i++;
+                }, 2000);
+            }
+        });
+
+        $(".turntables").click(function () {
+            if($('.rotate-img').attr("data-flag") == "1"){
+                $('.rotate-img').addClass('rotate-img1');
+                $('.rotate-img').attr("data-flag","0");
+                $("#audio")[0].play();
+            }
+            else {
+                $('.rotate-img').removeClass('rotate-img1');
+                $('.rotate-img').attr("data-flag","1")
+                $("#audio")[0].pause();
+            }
+        })
+
+        $(document).ready(function(){
+            $(".bulletScreen").width($(window).width());
+            $(".bulletScreen").height($(window).height());
+            $(".bulletScreenArea").height($(window).height());
+        })
+
+        $(".bulletScreenbutton").click(function(){
+            var bulletScreenText = $(".bulletScreeninput").val();
+            if(bulletScreenText == ""){
+                return ;
+            }
+            $.ajax({
+                url: "/bulletScreenMysql",
+                data: {
+                    "qq": {{.qq}},
+                    "userName":{{.name}},
+                    "bulletScreenText":bulletScreenText,
+                },
+                success: function (data, status) {
+                    if (data.message === "yes") {
+                        //数据库
+                        add({{.qq}},{{.name}},bulletScreenText);
+                        oContent.value= '';
+
+                    }
+                }
+            });
+        })
+        var oVideoBox = document.querySelector('.bulletScreenArea')
+        var oContent = document.querySelector('.bulletScreeninput');
+        var oSend = document.querySelector('.bulletScreenbutton');
+
+        function add(qq,name,content) {
+            if (!content) {
+                return
+            }
+            var qqtouxiang = document.createElement('img');
+            qqtouxiang.className = 'bulletScreenhrefqq1'
+            qqtouxiang.src = "http://q1.qlogo.cn/g?b=qq&nk="+qq+"&s=100";
+            oVideoBox.appendChild(qqtouxiang);
+            qqtouxiang.style.left = $(window).width()+"px";
+
+            var id = Math.ceil(Math.random() * 16);
+
+            var namespan = document.createElement('span');
+            namespan.className = 'bulletScreenName';
+            namespan.innerHTML = name+" : "+content;
+            oVideoBox.appendChild(namespan);
+            namespan.style.left = $(window).width()+"px";
+            namespan.style.color = color1[id];
+
+            console.log(id)
+            var maxTop = $(window).height()-150;
+            qqtouxiang.style.top = Math.round(Math.random() * maxTop) + 'px';
+            namespan.style.top = qqtouxiang.style.top;
+            var timer = setInterval(() => {
+                var start = qqtouxiang.offsetLeft;
+                start -= 1;
+
+                qqtouxiang.style.left = start + 'px';
+                var start1 = namespan.offsetLeft;
+                start1 -= 1;
+
+                namespan.style.left = start1 + 'px';
+                if (start < -namespan.offsetWidth) {
+                    clearInterval(timer);
+                    qqtouxiang.remove();
+                    namespan.remove();
+                }
+            }, 10);
+        }
+    </script>
+</body>
+</html>
