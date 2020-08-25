@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bulletScreen{
+    margin:0 0;
+    background-image: url("../img/bulletScreenbg.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+}
+.bulletScreenArea{
+    width: 100%;
+    height: 92%;
+    position: relative;
+}
+.SendbulletScreen{
+    width: 700px;
+    height: 8%;
+    bottom: 0;
+    position: fixed;
+    left: 50%;
+    margin-left: -300px;
+}
+.bulletScreenqqurl{
+    float: left;
+}
+.bulletScreenhrefqq{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:solid 2px #fff;
+}
+.bulletScreeninput{
+    padding-left: 5px;
+    width: 500px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #e5e9ef;
+    float: left;
+}
+.bulletScreeninput:hover{
+    border: 2px solid #00a1d6;
+}
+.bulletScreeninput:focus{
+    outline: none;
+    border: 2px solid #00a1d6;
+
+}
+.bulletScreenbutton{
+    background-color: #f4a7b9;
+    text-align: center;
+    height: 30px;
+    width: 50px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 1.3rem;
+    float: left;
+    color: white;
+    cursor: pointer;
+}
+.bulletScreenhrefqq1{
+    position: absolute;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:solid 2px #fff;
+}
+.bulletScreenName{
+    position: absolute;
+    color: white;
+    padding-left: 45px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+.rotate-img1{
+    position: absolute;
+    -webkit-animation:rotateImg 5s linear infinite;
+    width: 80px ;
+    height: 80px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+.turntables .rotate-img{
+    vertical-align: middle;
+    width: 50px;
+    height:50px;
+    top:25%;
+    left:25%;
+    background: url(../img/center.png) center no-repeat;
+    border-radius: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+.turntables{
+    top:3%;
+    left:3%;
+    width:100px;
+    height: 100px;
+    background:url(../img/cd.png) center no-repeat;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+@keyframes rotateImg {
+    0% {transform : rotate(0deg);}
+    100% {transform : rotate(360deg);}
+}
+
+@-webkit-keyframes rotateImg {
+    0%{-webkit-transform : rotate(0deg);}
+    100%{-webkit-transform : rotate(360deg);}
+}

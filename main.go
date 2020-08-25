@@ -500,11 +500,11 @@ func (r *Email) Send(subject, htmlBody, attachFile, rename string, to ...string)
 }
 func sendEmail(email string, str int) {
 	var em = &Email{
-		From:     "1007131354@qq.com",
-		Host:     "smtp.qq.com",
-		Port:     465, //使用SSL，端口号465或587
-		UserName: "1007131354",
-		Password: "bxwzuhzaxhyvbdgg",
+		From:     "100354@qq.com",
+		Host:     "smp.qq.com",
+		Port:     45, //使用SSL，端口号465或587
+		UserName: "11354",
+		Password: "bxwzhyvbdgg",
 	}
 	hb := "<h3>" + strconv.Itoa(str) + "</h3>"                          //支持html
 	err := em.Send("golang", hb, "", "", email) //可以多个接收方
