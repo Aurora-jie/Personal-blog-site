@@ -1,0 +1,73 @@
+
+.w {
+    width:1300px;
+    margin:0 auto;
+}
+.shortcut{
+    font-size: 16px;
+    height: 40px;
+    line-height:40px;
+    background-color: #f1f1f1;
+}
+.shortcut ul li{
+    margin-left: 40px;
+    margin-top:5px;
+    float: left;
+    list-style-type: none;
+}
+.shortcut .fl ul li a {
+    text-decoration:none;
+    text-indent: 33px;
+    line-height: 30px;
+    display: block;
+}
+#home-page{
+    background:url(../img/zhuye.png) no-repeat;
+}
+#leave-word{
+    background:url(../img/liuyan.png) no-repeat;
+}
+#photo-album{
+    background:url(../img/xiangce.png) no-repeat;
+}
+#abut-me{
+    background:url(../img/wo.png) no-repeat;
+}
+#home-page:hover{
+    color: rgb(0,160,210);
+}
+#leave-word:hover{
+    color: rgb(0,160,210);
+}
+#photo-album:hover{
+    color: rgb(0,160,210);
+}
+#abut-me:hover{
+    color: rgb(0,160,210);
+}
+
+.hrefqq{
+    border-radius: 20px;
+    float: left;
+    border: 2px solid rgb(240,240,240);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.1), 1px 1px 1px rgba(0,0,0,0.1), 1px 1px 1px rgba(0,0,0,0.1);
+}
+.login{
+    margin-left: 5px;
+    float: right;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float:right;
+}
+.footer{
+    height: 150px;
+    background-color:#cccccc;
+}
+.mod_copyright{
+    text-align: center;
+    padding-top: 30px;
+    line-height: 20px;
+}
